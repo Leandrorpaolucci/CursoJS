@@ -1,8 +1,14 @@
-let nome = 'Leandro Ribeiro Paolucci';
+const nome = 'Leandro';
+const nome1 = "Leandro";
+const nome2 = `Leandro`;
 
-console.log(nome, ' Nasceu em 1995.');
-console.log('Em 2023', nome , 'conheceu a Camila.');
-console.log('Em 2023 Pediu a Camila em Namoro');
-console.log('Camila teve 1 filho com', nome,   'em 2023');
-console.log('O filho chama-se Arthur');
+const num1 = 10;
+const num2 = 10.52
 
+let nomeAluno; //undefined = não aponta pra lugar nenhum da memoria
+let sobreNomeAluno = null; // Nulo -> não aponta pra lugar nenhum da memoria
+const aprovado = true; // Boolean true, false
+
+console.log(typeof nome, nome);
+console.log(typeof num1, num1);
+console.log(typeof sobreNomeAluno, sobreNomeAluno) 
