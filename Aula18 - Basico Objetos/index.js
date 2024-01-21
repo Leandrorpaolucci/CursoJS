@@ -7,9 +7,7 @@ console.log(array);
 console.log('---------------ORIENTAÇÃO A OBJETOS I ---------------------');
 
 function criaPessoa(nome, sobrenome, idade) {
-    return {
-        nome, sobrenome, idade
-    };
+    return { nome, sobrenome, idade };
 }
 
 const pessoa1 = criaPessoa('Leandro', 'Ribeiro', 28);
