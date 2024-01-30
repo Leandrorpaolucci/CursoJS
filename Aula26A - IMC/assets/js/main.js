@@ -1,10 +1,11 @@
-// Capturar o Evento de submit do formulário
+// Capturar evento de submit do formulário
+const form = document.querySelector("#formulario");
 
-const form = document.querySelector("#formulario"); // id #
-form.addEventListener("submit", function (event) {  
+form.addEventListener("submit", function (event) {
   event.preventDefault();
   const inputPeso = event.target.querySelector("#peso");
   const inputAltura = event.target.querySelector("#altura");
+
   const peso = Number(inputPeso.value);
   const altura = Number(inputAltura.value);
 
@@ -21,23 +22,19 @@ form.addEventListener("submit", function (event) {
   const imc = getImc(peso, altura);
   const nivelImc = getNivelImc(imc);
 
-  console.log(imc, nivelImc);
-  
-  const msg = `Seu IMC é ${imc} (${nivelImc}).`
-  
+  const msg = `Seu IMC é ${imc} (${nivelImc}).`;
   setResultado(msg, true);
+
 
 });
 
-
 function getNivelImc(imc) {
   const nivel = [
-    "Abaixo do peso",
+    "Abaixo do Peso",
     "Peso Normal",
     "Sobrepeso",
-    "Obesidade Grau 1",
-    "Obesidade Grau 2",
-    "Obesidade Grau 3",
+    "Obesidade grau I",
+    "Obesidade grau II, Obesidade grau III",
   ];
 
   if (imc >= 39.9) return nivel[5];
@@ -53,21 +50,25 @@ function getImc(peso, altura) {
   return imc.toFixed(2);
 }
 
-function criaP() {
+// Função que CRIA PARAGRAFO
+
+function criaParagrafo() {
   const p = document.createElement("p");
   return p;
 }
 
+//Função que coloca um resultado na div com ID resultado com o filtro querySelector
 function setResultado(msg, isValid) {
-  const resultado = document.querySelector("#resultado");
-  resultado.innerHTML = '';
+  //Mensagem é o parametro da msg na função acima
+  const resultado = document.querySelector('#resultado'); //Variável responsável por pegar o ID="Resultado" DO HTML
+  resultado.innerHTML = "";
 
-  const p = criaP();
-
+  const p = criaParagrafo();
+  
   if (isValid) {
-    p.classList.add('paragrafo-resultado');
+    p.classList.add("paragrafo-resultado");
   } else {
-    p.classList.add('bad');
+    p.classList.add("bad");
   }
 
   p.innerHTML = msg;
