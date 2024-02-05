@@ -7,8 +7,16 @@
 
 //v-controle i = index
 //
-for (let i = 440; i <= 500; i += 10) {
-  console.log(`Linha -> ${i} true`);
-}
+// for (let i = 0; i <=50; i++) {
+//   const par = i % 2 === 0 ? 'Par' : 'Impar';
+//   console.log(i, par);
+// }
 
-console.log('Cheguei no valor False');
+// console.log('Cheguei no valor False');
+
+
+const frutas = ['Maça', 'Pêra', 'Uva', 'Laranja', 'Goiaba', 'Manga',]
+
+for (let i = 0; i < frutas.length; i++) {
+  console.log(`indíce ${i}`, frutas[i]);
+}
