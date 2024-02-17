@@ -9,8 +9,8 @@ function criaCalculadora() {
       this.focoDisplay();
     },
 
-    focoDisplay(){
-        this.display.focus();
+    focoDisplay() {
+      this.display.focus();
     },
 
     pressionaBackSpace() {
@@ -84,7 +84,7 @@ function criaCalculadora() {
 
     btnParaDisplay(valor) {
       this.display.value += valor;
-      
+
     },
   };
 }
