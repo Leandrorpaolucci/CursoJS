@@ -15,5 +15,5 @@ const objC = new Object();
 objC.chaveC = 'C';
 
 Object.setPrototypeOf(objB, objA);
-Object.setPrototypeOf(objC, objA);
-console.log(objC.chaveB);
+Object.setPrototypeOf(objC, objB);
+console.dir(objB, objA);
